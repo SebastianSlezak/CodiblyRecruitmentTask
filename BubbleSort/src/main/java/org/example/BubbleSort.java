@@ -33,9 +33,8 @@ public class BubbleSort {
 
         if (list.stream().anyMatch(Objects::nonNull)) {
             list.removeIf(Objects::isNull);
-        } else {
-            return new RuntimeException("RuntimeException").getMessage();
         }
+
         try {
             while (!sorted) {
                 sorted = true;
