@@ -23,7 +23,7 @@ public class BubbleSort {
                 }
             }
             return list;
-        } catch (NullPointerException e) {
+        } catch (RuntimeException e) {
             return new RuntimeException("RuntimeException").getMessage();
         }
     }
@@ -36,19 +36,21 @@ public class BubbleSort {
         } else {
             return new RuntimeException("RuntimeException").getMessage();
         }
-
-
-        while (!sorted) {
-            sorted = true;
-            for (int i = 0; i < list.size() - 1; i++) {
-                if (list.get(i) > list.get(i + 1)) {
-                    temp = list.get(i);
-                    list.set(i, list.get(i + 1));
-                    list.set(i + 1, temp);
-                    sorted = false;
+        try {
+            while (!sorted) {
+                sorted = true;
+                for (int i = 0; i < list.size() - 1; i++) {
+                    if (list.get(i) > list.get(i + 1)) {
+                        temp = list.get(i);
+                        list.set(i, list.get(i + 1));
+                        list.set(i + 1, temp);
+                        sorted = false;
+                    }
                 }
             }
+            return list;
+        } catch (RuntimeException e) {
+            return new RuntimeException("RuntimeException").getMessage();
         }
-        return list;
     }
 }
