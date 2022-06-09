@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public class BubbleSort {
             }
             return list;
         } catch (RuntimeException e) {
-            return new RuntimeException("RuntimeException").getMessage();
+            throw new RuntimeException();
         }
     }
 
@@ -49,7 +50,7 @@ public class BubbleSort {
             }
             return list;
         } catch (RuntimeException e) {
-            return new RuntimeException("RuntimeException").getMessage();
+            throw new RuntimeException();
         }
     }
 }

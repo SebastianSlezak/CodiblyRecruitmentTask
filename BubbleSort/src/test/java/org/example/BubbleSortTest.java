@@ -43,6 +43,6 @@ class BubbleSortTest {
     @Test
     void test5() {
         var bubbleSort = new BubbleSort();
-        assertEquals("RuntimeException", bubbleSort.sort((List<Integer>) null));
+        assertThrows(RuntimeException.class, () -> bubbleSort.sort((List<Integer>) null));
     }
 }
