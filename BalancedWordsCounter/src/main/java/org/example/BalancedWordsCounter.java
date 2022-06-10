@@ -27,11 +27,5 @@ public class BalancedWordsCounter {
         } catch (RuntimeException e) {
             throw new RuntimeException();
         }
-
-
-        //TODO dwa sposoby sprawdzenia czy w stringu jest liczba
-        //1. rozłożyć stringa na znaki i pętlą sprawdzić czy znajduje się tam liczba, jeżeli w stringu znajduje się liczba to wtedy zwracane jest "RuntimeException".
-        //2. sprawdzić stringa za pomocą regex.
-
     }
 }
